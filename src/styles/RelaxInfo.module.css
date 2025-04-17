@@ -1,0 +1,74 @@
+.relaxInfoContainer {
+  font-family: var(--theme-font);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  position: relative;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform 2s ease, opacity 4s ease;
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.relaxImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.relaxText {
+  opacity: 0;
+  font-size: 40px;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 222px;
+}
+
+.enjoyText {
+  opacity: 0;
+  font-size: 40px;
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 222px;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (min-width: 1350px) {
+  .relaxText {
+    top: 35%;
+  }
+  .enjoyText {
+    top: 68%;
+  }
+}
+.delay2 {
+  transition-delay: 1.5s;
+}
+
+.delay {
+  transition-delay: 3.5s;
+}
