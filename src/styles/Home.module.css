@@ -135,6 +135,8 @@
   font-family: var(--theme-font);
   height: calc(100vh - 60px);
   position: relative;
+  color: var(--theme-color);
+  z-index: -1;
 }
 
 .whyWaitText {
@@ -145,5 +147,4 @@
   transform: translate(-50%, -50%);
   width: 300px;
   text-align: center;
-  z-index: -1;
 }

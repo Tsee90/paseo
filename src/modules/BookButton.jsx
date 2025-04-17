@@ -1,8 +1,7 @@
 import styles from '../styles/BookButton.module.css';
 
 const BookButton = () => {
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     window.open(
       'https://www.booking.com/hotel/ph/paseo-del-mar-dive-resort.html',
       '_blank'

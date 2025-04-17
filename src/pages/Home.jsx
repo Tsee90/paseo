@@ -62,7 +62,7 @@ const Home = () => {
             className={`${styles.downArrowWrapper}`}
           >
             <div className={`${styles.slogan}`}>Dive</div>
-            <span class={`material-symbols-outlined ${styles.downArrow}`}>
+            <span className={`material-symbols-outlined ${styles.downArrow}`}>
               keyboard_arrow_down
             </span>
           </div>
@@ -98,9 +98,11 @@ const Home = () => {
         >
           <BookButton></BookButton>
         </div>
-      </div>
-      <div className={`${styles.whyWait}`}>
-        <div className={`${styles.whyWaitText}`}>What are you waiting for?</div>
+        <div className={`${styles.whyWait}`}>
+          <div className={`${styles.whyWaitText}`}>
+            What are you waiting for?
+          </div>
+        </div>
       </div>
     </>
   );
