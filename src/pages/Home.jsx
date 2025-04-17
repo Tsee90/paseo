@@ -1,14 +1,18 @@
 import styles from '../styles/Home.module.css';
 import BookButton from '../modules/BookButton';
+import DiveInfo from '../modules/DiveInfo';
 import { useEffect, useState, useRef } from 'react';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
+  const [info1Visible, setInfo1Visible] = useState(false);
   const infoRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       const triggerHeight = window.innerHeight * 0.6;
       setVisible(window.scrollY > triggerHeight);
+      setInfo1Visible(window.scrollY > 1);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -44,7 +48,13 @@ const Home = () => {
           </div>
         </div>
         <div ref={infoRef} className={`${styles.infoContainer1}`}>
-          Info1
+          <div
+            className={`${styles.diveInfoWrapper} ${
+              info1Visible ? styles.show : ''
+            }`}
+          >
+            <DiveInfo></DiveInfo>
+          </div>
         </div>
         <div
           className={`${styles.floatButtonContainer} ${
