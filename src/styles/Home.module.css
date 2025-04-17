@@ -1,5 +1,6 @@
 .homeContainer {
   margin-top: 60px;
+  position: relative;
 }
 
 .hero {
@@ -20,6 +21,14 @@
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 200px;
+}
+
+.heroButtonContainer {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -36,7 +45,11 @@
     background-position: 25% center;
   }
   .slogan {
-    top: 28%;
+    top: 31%;
+  }
+
+  .heroButtonContainer {
+    top: 65%;
   }
 }
 
@@ -45,7 +58,10 @@
     background-position: 26% center;
   }
   .slogan {
-    top: 28%;
+    top: 31%;
+  }
+  .heroButtonContainer {
+    top: 65%;
   }
 }
 
@@ -54,7 +70,10 @@
     background-position: 28% center;
   }
   .slogan {
-    top: 28%;
+    top: 31%;
+  }
+  .heroButtonContainer {
+    top: 65%;
   }
 }
 
@@ -63,7 +82,10 @@
     background-position: 29% center;
   }
   .slogan {
-    top: 28%;
+    top: 31%;
+  }
+  .heroButtonContainer {
+    top: 65%;
   }
 }
 
@@ -72,7 +94,10 @@
     background-position: 30% center;
   }
   .slogan {
-    top: 28%;
+    top: 31%;
+  }
+  .heroButtonContainer {
+    top: 65%;
   }
 }
 
@@ -81,11 +106,57 @@
     background-position: 31% center;
   }
   .slogan {
-    top: 28%;
+    top: 31%;
+  }
+  .heroButtonContainer {
+    top: 65%;
+  }
+}
+
+.downArrowWrapper {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.downArrow {
+  display: inline-block;
+  animation: pulse 2.5s ease-in-out infinite;
+  font-size: 75px;
+  color: black;
+}
+
+.downArrow:hover {
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    color: black;
+  }
+  50% {
+    color: #ffffff;
+  }
+  100% {
+    color: black;
   }
 }
 
 .infoContainer1 {
   background-color: white;
   height: 100vh;
+}
+
+.floatButtonContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.floatButtonContainer.show {
+  opacity: 1;
+  visibility: visible;
 }
