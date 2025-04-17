@@ -25,7 +25,7 @@ const Home = () => {
       setInfo3Visible(window.scrollY > window.innerHeight * 2);
       setInfo4Visible(
         window.scrollY + window.innerHeight >=
-          document.documentElement.scrollHeight
+          document.documentElement.scrollHeight - 100
       );
     };
 
